@@ -8,7 +8,8 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "api": "ng serve | json-server --watch src/app/heroes.json --port 3004"
   },
   "private": true,
   "dependencies": {
