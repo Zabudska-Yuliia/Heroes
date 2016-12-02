@@ -7,7 +7,7 @@ import { Hero } from './hero';
 
 @Injectable()
 export class HeroService {
-    private heroesUrl = 'Heroes/heroes.json';
+    private heroesUrl = '/api/hero/';
 
     constructor(private http: Http) { }
 
@@ -15,8 +15,9 @@ export class HeroService {
     getHeroes(): Promise<Hero[]> {
         return this.http.get(this.heroesUrl)
             .toPromise()
-            .then(response => response.json().data as Hero[])
+            .then(response => response.json() as Hero[])
             .catch(this.handleError);
+
     }
 
     getHeroesSlowly(): Promise<Hero[]> {

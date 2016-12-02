@@ -9,7 +9,7 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "api": "ng serve | json-server --watch src/app/heroes.json --port 3004"
+    "api": "ng serve --proxy-config proxy.config.json | json-server --watch hero.json --routes routes.json --port 2100 "
   },
   "private": true,
   "dependencies": {
