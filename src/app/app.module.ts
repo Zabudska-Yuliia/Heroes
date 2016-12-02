@@ -11,6 +11,8 @@ import { HeroService }         from './hero.service';
 
 import { HttpModule }    from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
+import './rxjs-extensions';
+import {HeroSearchComponent} from "./heroes-search/hero-search.component";
 
 
 @NgModule({
@@ -39,11 +41,13 @@ import { AppRoutingModule } from './app-routing.module';
       }
     ])
   ],
+
   declarations: [
     AppComponent,
     DashboardComponent,
     HeroDetailComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroSearchComponent
   ],
   providers: [
     HeroService
